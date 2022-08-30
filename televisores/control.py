@@ -1,8 +1,5 @@
 class Control:
-    def __init__(self, tv):
-        self._tv = tv
-    
-    def getTv():
+    def getTv(self):
         return self._tv
     def setTv(self, tv):
         self._tv = tv
