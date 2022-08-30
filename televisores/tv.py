@@ -1,6 +1,4 @@
-from televisores.control import Control
-from televisores.marca import Marca
-
+from nimetypes import __init__
 class TV:
     numTV = 0    
     def __init__(self, marca, estado):
@@ -9,7 +7,7 @@ class TV:
         self._precio = 500
         self._estado = estado
         self._volumen = 1
-        numTV += 1
+        TV.numTV += 1
 
     def getMarca():
         return self._marca
@@ -29,13 +27,18 @@ class TV:
     def setPrecio(self, precio):
         self._precio = precio
     def setVolumen(self, volumen):
-        self._volumen = volumen
+        if volumen >= 1 and volumen <= 7 and self._estado == True:
+            self._volumen = volumen
     def setCanal(self, canal):
-        self._canal = canal
+        if canal >= 1 and canal <= 120 and self._estado == True:
+            self._canal = canal
 
     @classmethod
     def getNumTV(cls):
         return cls.numTV
+    @classmethod
+    def setNumTV(cls, numTV):
+        cls.numTV = numTV
     
     def turnOn():
         self._estado = True

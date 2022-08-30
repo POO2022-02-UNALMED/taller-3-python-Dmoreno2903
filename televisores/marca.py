@@ -1,3 +1,4 @@
+from nimetypes import __init__
 class Marca:
     def __init__(self, nombre):
         self._nombre = nombre
