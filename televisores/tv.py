@@ -8,15 +8,15 @@ class TV:
         self._volumen = 1
         TV.numTV += 1
 
-    def getMarca():
+    def getMarca(self):
         return self._marca
-    def getControl():
+    def getControl(self):
         return self._control
-    def getPrecio():
+    def getPrecio(self):
         return self._precio
-    def getVolumen():
+    def getVolumen(self):
         return self._volumen
-    def getCanal():
+    def getCanal(self):
         return self._canal
 
     def setMarca(self, marca):
